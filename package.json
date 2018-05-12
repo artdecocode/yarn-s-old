@@ -1,6 +1,6 @@
 {
   "name": "yarn-s",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Run multiple yarn commands in series.",
   "main": "build",
   "scripts": {
