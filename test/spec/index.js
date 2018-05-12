@@ -1,23 +1,22 @@
-import { equal, assert } from 'zoroaster/assert'
-import context, { Context } from '../context' // eslint-disable-line no-unused-vars
-import yarnS from '../../src'
+import { ok } from 'assert'
+import { bin } from '../../package.json'
+import spawncommand from 'spawncommand'
 
-const yarnSTestSuite = {
-  context,
-  'should be a function'() {
-    equal(typeof yarnS, 'function')
-  },
-  'should call package without error'() {
-    assert.doesNotThrow(() => {
-      yarnS()
-    })
-  },
-  /**
-   * @param {Context} api
-   */
-  async 'calls test context method'(api) {
-    await api.example()
+const T = {
+  async 'runs the binary'() {
+    const keys = Object.keys(bin)
+    ok(keys.length)
+    const [k] = keys
+    const t = bin[k]
+    const proc = spawncommand('node', [t, 'build', 'build'])
+    const { promise } = proc
+    proc.stdout.pipe(process.stdout)
+    const { stdout, code } = await promise
+    const lines = stdout.split('\n')
+    const f = lines.filter(l => /babel src\/bin\/yarn-s\.js --out-file index\.js/.test(l))
+    ok(f.length == 2)
+    ok(!code)
   },
 }
 
-export default yarnSTestSuite
+export default T

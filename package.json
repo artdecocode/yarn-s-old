@@ -1,13 +1,20 @@
 {
   "name": "yarn-s",
   "version": "1.0.0",
-  "description": "Run mulitple yarn commands in series.",
+  "description": "Run multiple yarn commands in series.",
   "main": "build",
   "scripts": {
     "test": "zoroaster test/spec --babel",
     "test-watch": "zoroaster test/spec --watch --babel",
-    "build": "babel src --out-dir build"
+    "build": "babel src/bin/yarn-s.js --out-file index.js",
+    "start": "node src/bin"
   },
+  "bin": {
+    "yarn-s": "index.js"
+  },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/artdecocode/yarn-s.git"
@@ -28,5 +35,8 @@
     "@babel/plugin-transform-modules-commonjs": "7.0.0-beta.46",
     "@babel/register": "7.0.0-beta.46",
     "zoroaster": "1.1.0"
+  },
+  "dependencies": {
+    "spawncommand": "1.1.0"
   }
 }
