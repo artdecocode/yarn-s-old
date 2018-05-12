@@ -1,21 +1,20 @@
-# yarn-series
+# yarn-s
 
-`yarn-series` is a new Node.js npm package.
+`yarn-s` is a new Node.js npm package.
 
-Run mulitple yarn commands in series.
+Run multiple yarn commands in series.
 
-## `yarnSeries():void`
+## CLI
 
-Call this function to get a result you want.
+This is a CLI application which is capable of executing yarn commands in
+series.
 
-```js
-const yarnSeries = require('yarn-series')
-
-yarnSeries()
+```sh
+yarn-s
 ```
 
 ---
 
-(c) [artdecocode][1] 2018
+(c) [Art Deco Code][1] 2018
 
 [1]: https://artdeco.bz

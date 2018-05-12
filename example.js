@@ -1,3 +1,3 @@
-const yarnSeries = require('./')
+const yarnS = require('./')
 
-yarnSeries()
+yarnS()

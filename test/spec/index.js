@@ -1,15 +1,15 @@
 import { equal, assert } from 'zoroaster/assert'
 import context, { Context } from '../context' // eslint-disable-line no-unused-vars
-import yarnSeries from '../../src'
+import yarnS from '../../src'
 
-const yarnSeriesTestSuite = {
+const yarnSTestSuite = {
   context,
   'should be a function'() {
-    equal(typeof yarnSeries, 'function')
+    equal(typeof yarnS, 'function')
   },
   'should call package without error'() {
     assert.doesNotThrow(() => {
-      yarnSeries()
+      yarnS()
     })
   },
   /**
@@ -20,4 +20,4 @@ const yarnSeriesTestSuite = {
   },
 }
 
-export default yarnSeriesTestSuite
+export default yarnSTestSuite

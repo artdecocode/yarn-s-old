@@ -2,5 +2,5 @@
 
 ## 1.0.0
 
-- Create `yarn-series` with [`mnp`][https://mnpjs.org]
+- Create `yarn-s` with [`mnp`][https://mnpjs.org]
 - [repository]: `src`, `test`

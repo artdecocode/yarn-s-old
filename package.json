@@ -1,5 +1,5 @@
 {
-  "name": "yarn-series",
+  "name": "yarn-s",
   "version": "1.0.0",
   "description": "Run mulitple yarn commands in series.",
   "main": "build",
@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/artdecocode/yarn-series.git"
+    "url": "git://github.com/artdecocode/yarn-s.git"
   },
   "keywords": [
-    "yarn-series"
+    "yarn-s"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/artdecocode/yarn-series/issues"
+    "url": "https://github.com/artdecocode/yarn-s/issues"
   },
-  "homepage": "https://github.com/artdecocode/yarn-series#readme",
+  "homepage": "https://github.com/artdecocode/yarn-s#readme",
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.46",
     "@babel/core": "7.0.0-beta.46",

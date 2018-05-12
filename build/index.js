@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = yarnSeries;
+exports.default = yarnS;
 
 /**
  * This is the main package file.
  */
-function yarnSeries() {
-  console.log('yarn-series called');
+function yarnS() {
+  console.log('yarn-s called');
 }
