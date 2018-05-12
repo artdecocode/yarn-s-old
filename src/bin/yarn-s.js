@@ -34,9 +34,12 @@ const run = (a) => {
         const a = await acc
         const { promise } = run(command)
         const c = await promise
+        const { code } = c
+        if (code) throw new Error(`Command "${command}" existed with code ${code}`)
         return [...a, c]
       }, Promise.resolve([]))
-  } catch (err) {
-    console.error(err)
+  } catch ({ message, stack }) {
+    console.error(message) // eslint-disable-line
+    process.exit(1)
   }
 })()

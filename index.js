@@ -46,9 +46,17 @@ const run = a => {
         promise
       } = run(command);
       const c = await promise;
+      const {
+        code
+      } = c;
+      if (code) throw new Error(`Command "${command}" existed with code ${code}`);
       return [...a, c];
     }, Promise.resolve([]));
-  } catch (err) {
-    console.error(err);
+  } catch ({
+    message,
+    stack
+  }) {
+    console.error(message);
+    process.exit(1);
   }
 })();
